@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+@import "./variables";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 18px;
+}
+body {
+  font-family: "Kumbh Sans", sans-serif;
+  position: relative;
+  background: $bg-color;
+}
+.main {
+  margin: 1.2rem;
+  .faq-card-wrapper {
+    position: relative;
+    padding: 1rem;
+    background: #fff;
+    border-radius: 1rem;
+    margin-top: 10rem;
+    box-shadow: 2px 10px 5px rgba(0, 0, 0, 0.1);
+    .top-img {
+      position: absolute;
+      left: 45%;
+      top: -0.4rem;
+      transform: translate(-50%, -50%);
+      img {
+        width: 300px;
+      }
+    }
+    .faqs-container {
+      margin-top: 7rem;
+      h2 {
+        text-transform: uppercase;
+        text-align: center;
+        font-size: 2rem;
+      }
+      .faqs {
+        margin: 2rem 0;
+        .single-faq {
+          .wrapper {
+            display: grid;
+            grid-template-columns: auto 1rem;
+            align-items: center;
+            gap: 1rem;
+            // border-bottom: 0.1rem solid #eae6e6;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            .question {
+              font-size: 16px;
+              color: $grey-2;
+              padding: 1rem 0;
+            }
+            .arrow-down {
+              display: inline-block;
+              width: 23px;
+              color: $primary;
+              transition: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            }
+          }
+          .answer {
+            display: none;
+            font-size: 16px;
+            padding: 0.8rem 0;
+            color: $grey;
+          }
+        }
+      }
+    }
+  }
+}
+.rotate360 {
+  transform: rotate(180deg);
+}
+.isBold {
+  font-weight: bold;
+}
+
+.attribution {
+  margin: 2rem 0;
+  color: #e2e9ff;
+  text-align: center;
+  font-size: 14px;
+  a {
+    color: #7fffd4;
+    font-size: 14px;
+  }
+}
+
+@media screen and (min-width: $md) {
+  .faq-card-wrapper {
+    width: 60%;
+    margin: 0 auto;
+  }
+}
+@media screen and (min-width: $lg) {
+  .faq-card-wrapper {
+    width: 40%;
+  }
+}
